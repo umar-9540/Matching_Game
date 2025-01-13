@@ -79,10 +79,10 @@ const MatchingGame: React.FC<MatchingGameProps> = ({ data }) => {
 
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-800 text-white">
-      <h1 className="text-3xl font-bold mb-12">
+      <h1 className="text-3xl font-bold m-4 md:m-8 md:mb-12">
         Country-Capital Matching Game
       </h1>
-      <div className="grid grid-cols-7 gap-4">
+      <div className="flex flex-wrap md:grid grid-cols-7 m-4 mb-0 gap-4">
         {arr.map((ar, index) => (
           <button
             key={index}
@@ -107,7 +107,7 @@ const MatchingGame: React.FC<MatchingGameProps> = ({ data }) => {
         ))}
       </div>
       {allMatched && (
-        <p className="mt-6 text-2xl text-green-500">Congratulations!</p>
+        <p className="text-2xl text-green-500">Congratulations!</p>
       )}
     </div>
   );
