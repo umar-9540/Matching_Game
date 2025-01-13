@@ -40,7 +40,7 @@ const MatchingGame: React.FC<MatchingGameProps> = ({ data }) => {
       [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
     }
     setArr(shuffled);
-  }, []);
+  }, [data]);
 
   const handleOptionClick = (index: number) => {
     if (selected.length === 2 || arr[index].matched) return;
