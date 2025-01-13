@@ -75,13 +75,7 @@ const MatchingGame: React.FC<MatchingGameProps> = ({ data }) => {
     return false;
   };
 
-  let allMatched = true;
-  for (let i = 0; i < arr.length; i++) {
-    if (!arr[i].matched) {
-      allMatched = false;
-      break;
-    }
-  }
+  const allMatched = arr.every((ar) => ar.matched);
 
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-800 text-white">
